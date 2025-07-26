@@ -6,3 +6,7 @@ alias gpf='git push --force-with-lease --force-if-includes'
 
 # personal git aliases
 alias gap='git add -p'
+
+
+# Set complete path
+export PATH="$HOME/.local/bin:$PATH"

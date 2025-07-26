@@ -1,26 +1,120 @@
 {
-  "editor.fontFamily": "CaskaydiaMono Nerd Font",
-  "editor.tabSize": 2,
   "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontFamily": "CaskaydiaMono Nerd Font",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
   "editor.minimap.enabled": false,
-  "git.ignoreMissingGitWarning": true,
-  "editor.fontSize": 12,
-  "editor.occurrencesHighlight": "off",
-  "editor.selectionHighlight": false,
+  // "editor.occurrencesHighlight": "off",
+  // "editor.selectionHighlight": false,
   "editor.suggestOnTriggerCharacters": false,
   "editor.tabCompletion": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.renderWhitespace": "all",
+  "editor.guides.bracketPairs": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "editor.quickSuggestions": {
     "other": false,
     "comments": false,
     "strings": false
   },
   "files.trimTrailingWhitespace": true,
-  "git.confirmSync": false,
-  "window.menuBarVisibility": "compact",
-  "git.autofetch": true,
-  "git.openRepositoryInParentFolders": "always",
+  // "window.menuBarVisibility": "compact",
   "explorer.confirmDelete": false,
+  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "material-icon-theme",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.compactFolders": false,
+  "terminal.integrated.enablePersistentSessions": false,
+  "svg.preview.mode": "svg",
+  "git.openRepositoryInParentFolders": "always",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "python.languageServer": "Pylance",
+  "black-formatter.args": [
+    "--single-quotes",
+    "--line-length",
+    "40"
+  ],
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorCustomizations"
+  ],
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Tokyo Night",
-  "window.titleBarStyle": "custom"
+  "editor.fontSize": 12,
+  "window.autoDetectHighContrast": false,
+  // "files.exclude": {
+  //   "**/.git": false
+  // },
+  "git.confirmSync": false,
+  //vim
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.smartRelativeLine": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-k>": false,
+    "<C-h>": false
+  },
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ],
+      "silent": true
+    }
+  ],
+  "workbench.colorTheme": "Tokyo Night Storm",
 }

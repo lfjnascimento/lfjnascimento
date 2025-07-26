@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 cat <<\EOT
  _  __ _                      _                      _
@@ -12,21 +13,24 @@ cat <<\EOT
 EOT
 
 sudo apt-get update >/dev/null
-sudo apt-get install -y git >/dev/null
+sudo apt-get install -y git curl >/dev/null
 
-echo "Cloning lfjnascimento configs"
+[ -f ~/.bashrc ] && echo "CREATING .bashrc.bak BACKUP" && mv ~/.bashrc ~/.bashrc.bak
+cp ~/.local/share/omakub/configs/bashrc ~/.bashrc
+
+
+cd /tmp
+GUM_VERSION="0.14.3" # Use known good version
+wget -qO gum.deb "https://github.com/charmbracelet/gum/releases/download/v${GUM_VERSION}/gum_${GUM_VERSION}_amd64.deb"
+sudo apt-get install -y --allow-downgrades ./gum.deb
+rm gum.deb
+cd -
+
+
+echo "Cloning lfjnascimento"
 rm -rf ~/.local/share/lfjnascimento
 git clone https://github.com/lfjnascimento/lfjnascimento.git ~/.local/share/lfjnascimento >/dev/null
 
 echo -e "\n => configuring setup for ubuntu"
-
-# Gives you previews in the file manager when pressing space
-sudo apt install -y gnome-sushi
-
-# Flameshot is a nice step-up over the default Gnome screenshot tool
-sudo apt install -y Flameshot
-
-# The vlc
-sudo apt install -y vlc
 
 for setup in ~/.local/share/lfjnascimento/setup/*.sh; do source $setup; done
