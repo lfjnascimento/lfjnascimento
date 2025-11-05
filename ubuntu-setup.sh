@@ -16,7 +16,6 @@ sudo apt-get update >/dev/null
 sudo apt-get install -y git curl >/dev/null
 
 [ -f ~/.bashrc ] && echo "CREATING .bashrc.bak BACKUP" && mv ~/.bashrc ~/.bashrc.bak
-cp ~/.local/share/omakub/configs/bashrc ~/.bashrc
 
 
 cd /tmp
